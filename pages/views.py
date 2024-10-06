@@ -7,4 +7,4 @@ def index(req):
     return render(req,"pages/index.html",x)
 
 def about(req):
-    return hr("about page")
+    return render(req,"pages/about.html")
