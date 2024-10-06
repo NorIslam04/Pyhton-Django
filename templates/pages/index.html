@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block content %}
 {{name | cut:' '}}
 {{name | upper}}
 {{name | length}}
@@ -9,4 +10,6 @@
 {{name | slice:5}}
 {{age | default:"not found"}}
 {{name | add:"+"}}
+
+{% endblock content %}
 
