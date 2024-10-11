@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
 {{name | cut:' '}}
 {{name | upper}}
 {{name | length}}
@@ -20,7 +19,7 @@
 {%endif%}
 
 
-{% for item in name %}  <1-- in foroop en doit utiliser item in variable   -->
+{% for item in name %}  <!-- in foroop en doit utiliser item in variable   -->
     <p>{{ item }}</p>
 {% endfor %}
 
