@@ -9,3 +9,6 @@ def index1(req):
 
 def about(req):
     return render(req,"pages/about.html")
+
+def test(req):
+    return render(req,"pages/test.html")
