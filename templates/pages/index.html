@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
-{% load static %}
+
+{%load static%}
 
 {% block content %}
 
-<img src="{% static 'img/Meee.jpeg' %}" alt="image">
-
-<h1>Home Page</h1>
-
-
-
-
+  <h1>Bienvenue sur ma page !</h1>
+  <img src="{% static 'img/Me.jpeg' %}" alt="Me" width="400" >
+  <script src="{% static 'js/script.js' %}"></script>
 {% endblock content %}
 
 

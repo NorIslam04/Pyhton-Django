@@ -1,15 +1,10 @@
 {% load static %}
-{% include 'partes/navbar.html' %} <!--la place de header appller avec include et leur mplacement dans templates-->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-
-<!--________________________________________________________________________________-->
-
-{% block content %} <!--le meme non de les page html qui contein des 'content'  -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% include 'partes/navbar.html' %}
+    
+{% block content %}
+<!--____________-->
 {% endblock content %}
 
-<!--________________________________________________________________________________-->
-
-{% include 'partes/footer.html' %}<!--la place de heafooterfder appller avec include et leur mplacement dans templates-->
-
-
+{% include 'partes/footer.html' %}
