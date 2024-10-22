@@ -1,27 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-{{name | cut:' '}}
-{{name | upper}}
-{{name | length}}
-{{name | join:", "}}
-{{name | first}}
-{{name | truncatechars:10}}
-{{name | slice:5}}
-{{age | default:"not found"}}
-{{name | add:"+"}}
+<img src="{% static 'img/Meee.jpeg' %}" alt="image">
 
-{%if name == 'Islam Aoudia Nour' %}
-{{name}} is the best
-{%else%}
-{{name}} is not the best
-{%endif%}
-
-
-{% for item in name %}  <!-- in foroop en doit utiliser item in variable   -->
-    <p>{{ item }}</p>
-{% endfor %}
+<h1>Home Page</h1>
 
 
 

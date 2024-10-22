@@ -1,21 +1,12 @@
-
+{% load static %}
 {% include 'partes/navbar.html' %} <!--la place de header appller avec include et leur mplacement dans templates-->
-
-<!--style pour tous les page de html (block: content)
-<style>
-    body {
-        color: rgb(255, 255, 255);
-        background-color: rgb(33, 33, 33);
-    }
-</style>
--->
-
 
 
 <!--________________________________________________________________________________-->
 
-{%block content%} <!--le meme non de les page html qui contein des 'content'  -->
-{% endblock content%}
+{% block content %} <!--le meme non de les page html qui contein des 'content'  -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock content %}
 
 <!--________________________________________________________________________________-->
 
