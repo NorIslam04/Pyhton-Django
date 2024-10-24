@@ -32,17 +32,19 @@
         <th>Active</th>
         <th>Photo</th>
     </tr>
-    {% for person in persons %}
+    {% for per in person %}
     <tr>
-        <td>{{ person.first_name }}</td>
-        <td>{{ person.last_name }}</td>
-        <td>{{ person.age }}</td>
-        <td>{{ person.bio }}</td>
-        <td>{{ person.active|yesno:"Yes,No" }}</td>
-        <td><img src="{{ person.photo.url }}" alt="Photo of {{ person.first_name }}" style="width:50px;height:50px;"></td>
+        <td>{{ per.first_name }}</td>
+        <td>{{ per.last_name }}</td>
+        <td>{{ per.age }}</td>
+        <td>{{ per.bio }}</td>
+        <td>{{ per.active|yesno:"Yes,No" }}</td>
+        <td><img src="{{ per.photos.url}}" alt="Photo of {{ per.first_name }}" style="width:50px;height:50px;"></td>
     </tr>
     {% endfor %}
 </table>
+
+
 
 
 {%endblock content%}

@@ -9,3 +9,6 @@ class Person(models.Model):
     bio = models.TextField()
     image = models.ImageField(upload_to='photos/%Y%m%d')
     active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.first_name + " " + self.last_name
