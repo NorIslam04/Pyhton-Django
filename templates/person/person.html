@@ -1,0 +1,39 @@
+{%extends 'base.html' %}
+
+{% block content %}
+
+<div class="person-details">
+    <h2>{{ person.first_name }} {{ person.last_name }}</h2>
+    <p><strong>Age:</strong> {{ person.age }}</p>
+    <p><strong>Bio:</strong> {{ person.bio }}</p>
+    <p><strong>Status:</strong> {{ person.is_active|yesno:"Active,Inactive" }}</p>
+    <div class="photo">
+        <img src="{{ person.photo.url }}" alt="{{ person.first_name }} {{ person.last_name }}">
+    </div>
+</div>
+
+<style>
+    .person-details {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 600px;
+    }
+    .person-details h2 {
+        color: #333;
+    }
+    .person-details p {
+        color: #666;
+    }
+    .person-details .photo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+</style>
+
+
+
+{%endblock content%}

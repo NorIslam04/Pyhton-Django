@@ -1,3 +1,8 @@
 h1{
-    color: rgb(195, 0, 255);
+    color: rgb(0, 30, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
 }
+
