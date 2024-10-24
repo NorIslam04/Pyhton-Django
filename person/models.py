@@ -7,7 +7,7 @@ class Person(models.Model):
     last_name = models.CharField(max_length=50)
     age = models.IntegerField()
     bio = models.TextField()
-    image = models.ImageField(upload_to='photos/%Y%m%d')
+    image = models.ImageField(upload_to='photos/%Y/%m/%d')
     active = models.BooleanField(default=False)
 
     def __str__(self):

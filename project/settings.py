@@ -122,10 +122,14 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,"static") #DISTINATION
 
 
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"project/static") #SOURCE
 ] 
+
+MEDIA_URL = 'photos/' #URL
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '') #DISTINATION
+
 
 
 
@@ -133,3 +137,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+

@@ -39,7 +39,7 @@
         <td>{{ per.age }}</td>
         <td>{{ per.bio }}</td>
         <td>{{ per.active|yesno:"Yes,No" }}</td>
-        <td><img src="{{ per.photos.url}}" alt="Photo of {{ per.first_name }}" style="width:50px;height:50px;"></td>
+        <td><img src="{{ per.image.url}}" alt="Photo of {{ per.first_name }}" style="width:50px;height:50px;"></td>
     </tr>
     {% endfor %}
 </table>
