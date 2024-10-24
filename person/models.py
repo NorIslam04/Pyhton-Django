@@ -12,3 +12,7 @@ class Person(models.Model):
 
     def __str__(self):
         return self.first_name + " " + self.last_name
+    
+    class Meta:
+        ordering = ['first_name'] #trie les personnes par ordre alphabetique
+        verbose_name_plural = 'People' #change le nom de la table dans l'admin
