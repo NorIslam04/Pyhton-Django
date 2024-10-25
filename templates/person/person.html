@@ -6,20 +6,24 @@
     <h2>{{ person.first_name }} {{ person.last_name }}</h2>
     <p><strong>Age:</strong> {{ person.age }}</p>
     <p><strong>Bio:</strong> {{ person.bio }}</p>
-    <p><strong>Status:</strong> {{ person.is_active|yesno:"Active,Inactive" }}</p>
+    <p><strong>Status:</strong> {{ person.active | yesno:"Active,Inactive" }}</p>
     <div class="photo">
-        <img src="{{ person.photo.url }}" alt="{{ person.first_name }} {{ person.last_name }}">
+        <img src="{{ person.image.url }}" alt="{{ person.first_name }} {{ person.last_name }}">
     </div>
 </div>
 
 <style>
+    img{
+        width:30%;
+    }
     .person-details {
         font-family: Arial, sans-serif;
         margin: 20px;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 10px;
-        max-width: 600px;
+        width: 40%;
+        display: inline-block;
     }
     .person-details h2 {
         color: #333;
@@ -32,6 +36,7 @@
         height: auto;
         border-radius: 10px;
     }
+
 </style>
 
 
