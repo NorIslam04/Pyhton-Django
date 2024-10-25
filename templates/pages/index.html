@@ -4,9 +4,47 @@
 
 {% block content %}
 
+  <style>
+    /* Global settings */
+
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+/* Links */
+a {
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  
+}
+ul{
+  text-align: center;
+}
+
+a:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+
   <h1>Bienvenue sur ma page !</h1>
-  <img src="{% static 'img/Me.jpeg' %}" alt="Me" width="300px" >
-  <script src="{% static 'js/script.js' %}"></script>
+  <p>Vous pouvez accéder à la page d'administration ou à la liste des personnes.</p>
+  <ul>
+  <a href="{% url 'admin:index' %}">Admin Page</a>
+  <a href="{% url 'persons' %}">Persons List</a>
+  <a href="{% url 'person' %}">Person Page</a>
+  </ul>
 
 {% endblock content %}
 
