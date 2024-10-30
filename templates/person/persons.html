@@ -31,6 +31,7 @@
         <th>Bio</th>
         <th>Active</th>
         <th>Photo</th>
+        <th>En_Ligne</th>
     </tr>
     {% for per in person %}
     <tr>
@@ -40,6 +41,7 @@
         <td>{{ per.bio }}</td>
         <td>{{ per.active|yesno:"Yes,No" }}</td>
         <td><img src="{{ per.image.url}}" alt="Photo of {{ per.first_name }}" style="width:50px;height:50px;"></td>
+        <td>{{ per.en_ligne|yesno:"Yes,No" }}</td>
     </tr>
     {% endfor %}
 </table>

@@ -9,6 +9,7 @@ class Person(models.Model):
     bio = models.TextField()
     image = models.ImageField(upload_to='photos/%Y/%m/%d')
     active = models.BooleanField(default=False)
+    en_ligne=models.BooleanField(default=False)
 
     def __str__(self):
         return self.first_name + " " + self.last_name
@@ -16,3 +17,16 @@ class Person(models.Model):
     class Meta:
         ordering = ['first_name'] #trie les personnes par ordre alphabetique
         verbose_name_plural = 'People' #change le nom de la table dans l'admin
+
+class Post(models.Model):
+    POST_TYPE_CHOICES = [
+        ('phto', 'Photo'),
+        ('video', 'Video'),
+        ('texte', 'Text')
+    ]
+
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    post_type = models.CharField(max_length=5, choices=POST_TYPE_CHOICES)
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField()
