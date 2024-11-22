@@ -1,0 +1,27 @@
+/* Global settings */
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 20px;
+    }
+
+    /* Links */
+    a {
+      display: inline-block;
+      margin: 10px 20px;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: #45a049;
+    }
