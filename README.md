@@ -17,7 +17,7 @@ Bienvenue, {{ user.username }}
 Si la vue passe une variable user.username, le nom d'utilisateur sera affiché dans la balise.
 
 ### 3. Balises conditionnelles et de contrôle de flux
-#### a. if et else
+#### a. (`if`) et (`else`)
 DTL permet d'ajouter des conditions pour afficher certains contenus en fonction de critères.
 
 #### Exemple :
@@ -27,6 +27,18 @@ DTL permet d'ajouter des conditions pour afficher certains contenus en fonction 
 {% endfor %}
 ```
 Cela affichera "Bienvenue sur votre profil!" si l'utilisateur est authentifié, sinon il affichera "Veuillez vous connecter."
+
+#### b. Boucles (`for`)
+DTL permet d'itérer sur des collections (comme des listes ou des dictionnaires) avec la balise for.
+
+#### Exemple :
+```bash
+{% for item in items %} 
+{{ item.name }}
+{% endfor %} 
+```
+Cela générera une liste d'éléments avec leurs noms.
+
 
 
 
