@@ -8,7 +8,7 @@ DTL utilise une syntaxe claire et facile à comprendre. Les balises sont délimi
 ## 1. Variables
 Les variables passées depuis le contexte de la vue peuvent être affichées en les entourant de doubles accolades.
 
-### Exemple :
+#### Exemple :
 ```bash
 Bienvenue, {{ user.username }}
 ```
@@ -18,7 +18,7 @@ Si la vue passe une variable user.username, le nom d'utilisateur sera affiché d
 ### a. (`if`) et (`else`)
 DTL permet d'ajouter des conditions pour afficher certains contenus en fonction de critères.
 
-### Exemple :
+#### Exemple :
 ```bash
 {% for item in items %} 
 {{ item.name }}
@@ -29,7 +29,7 @@ Cela affichera "Bienvenue sur votre profil!" si l'utilisateur est authentifié, 
 ### b. Boucles (`for`)
 DTL permet d'itérer sur des collections (comme des listes ou des dictionnaires) avec la balise for.
 
-### Exemple :
+#### Exemple :
 ```bash
 {% for item in items %} 
 {{ item.name }}
@@ -40,7 +40,7 @@ Cela générera une liste d'éléments avec leurs noms.
 ## 4. Filtres
 Les filtres permettent de modifier ou formater les données avant leur affichage.
 
-### Exemple :
+#### Exemple :
 ```bash
 {{ user.email|lower }}
 {{ person.active | yesno:"Active,Inactive" }} #person.active doit etre Boolean
@@ -51,7 +51,7 @@ Le filtre lower convertira l'email de l'utilisateur en minuscules avant de l'aff
 ### a. Inclusions de templates
 DTL permet d'inclure un autre template dans un template parent avec la balise (`{% include %}`).
 
-### Exemple :
+#### Exemple :
 ```bash
 {% include 'header.html' %}
 ```
@@ -60,7 +60,7 @@ Cela inclura le contenu du fichier (`header.html`) dans le template courant.
 ### b. Héritage de templates
 DTL permet d'étendre un template de base avec la balise (`{% block %}`) et (`{% extends %}`).
 
-### Exemple (template parent base.html) :
+#### Exemple (template parent base.html) :
 ```bash
 {% block header %}Header par défaut{% endblock %} 
 {% block content %}Contenu principal{% endblock %}  
@@ -78,7 +78,7 @@ Ce code hérite de (`base.html`) et remplace certains blocs avec des contenus pe
 ## 6. Sécurité
 Django applique des mesures de sécurité par défaut dans les templates. Par exemple, l'échappement automatique des caractères spéciaux dans les variables pour prévenir les attaques Cross-site Scripting (XSS).
 
-### Exemple :
+#### Exemple :
 ```bash
 {{ user_input }}
 ```
@@ -87,7 +87,7 @@ Si (`user_input`) contient des balises HTML ou des scripts, Django les échappe 
 ### 7. Chargement de fichiers statiques
 DTL permet d'inclure facilement des fichiers CSS, JavaScript et images dans le template.
 
-### Exemple :
+#### Exemple :
 ```bash
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
