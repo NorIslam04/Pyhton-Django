@@ -20,9 +20,16 @@ DTL permet d'ajouter des conditions pour afficher certains contenus en fonction 
 
 #### Exemple :
 ```bash
-{% for item in items %} 
-{{ item.name }}
-{% endfor %}
+{% if user.is_superuser %}
+  <p>Bonjour, Super Administrateur!</p>
+{% elif user.is_staff %}
+  <p>Bienvenue, membre de l'équipe!</p>
+{% elif user.is_authenticated %}
+  <p>Bonjour, utilisateur authentifié!</p>
+{% else %}
+  <p>Veuillez vous connecter pour accéder à ce contenu.</p>
+{% endif %}
+
 ```
 Cela affichera "Bienvenue sur votre profil!" si l'utilisateur est authentifié, sinon il affichera "Veuillez vous connecter."
 
